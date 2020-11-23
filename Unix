@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage ('Create folder') {
             steps {
-                echo 'mkdir build '
-                echo ' vi car.txt'
-                echo ' "HI HOW ARE YOU" > car.txt'
+                echo 'mkdir sample '
+                echo ' touch sample/example.txt '
+                echo ' "HI HOW ARE YOU" > example.txt'
             }
         }
     }
