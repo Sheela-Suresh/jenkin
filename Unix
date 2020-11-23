@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage ('Create folder') {
             steps {
-                echo 'mkdir sample '
-                echo ' touch sample/example.txt '
+                echo 'mkdir build '
+                echo ' touch build/example.txt '
                 echo ' "HI HOW ARE YOU" > example.txt'
             }
         }
