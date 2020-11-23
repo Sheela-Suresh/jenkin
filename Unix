@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage ('Create folder') {
+            steps {
+                echo 'mkdir build'
+                echo 'touch build/car.txt'
+                echo ' "hi " > build/car.txt'
+            }
+        }
+    }
+
+}
