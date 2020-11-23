@@ -1,24 +1,32 @@
 pipeline {
     agent any
+    parameters{
+        booleanParam(name: 'executeBuild', defaultValue: true, description: '')
+    }
 
     stages {
-        stage('Build') {
+        stage('build') {
+            when {
+                expression {
+                    params.executeBuild
+                }
+            }
             steps {
-                echo 'This is Build step'
+                echo 'building the application..'
+                
             }
         }
-        stage('Test') {
-            steps {
-                echo 'This is test step'
+         stage('Test') {
+                steps {
+                    echo "Testing the application"
             }
         }
-        stage('Deploy') {
+        stage("deploy") {
             steps {
-                echo 'This is deploy step'
+                echo "deploying the application"
+                
             }
         }
-        
     }
 }
-
 
