@@ -5,7 +5,7 @@ pipeline {
         stage ('Create folder') {
             steps {
                 echo 'mkdir build '
-                echo ' "hi " > build/car.txt'
+                echo ' "hi, how are you" > car.txt'
                 echo 'cat car.txt'
             }
         }
