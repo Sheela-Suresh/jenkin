@@ -1,14 +1,2 @@
-pipeline {
-    agent any
-    
-    stages {
-        stage ('Create folder') {
-            steps {
-                echo 'mkdir build '
-                echo ' touch build/example.txt '
-                echo ' "HI HOW ARE YOU" > example.txt'
-            }
-        }
-    }
-
-}
+echo 'mkdir build '
+           
